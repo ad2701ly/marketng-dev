@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-atas class="fixed-top" />
+    <nav-atas />
 
     <menu-samping />
     <div class="isi" :class="{'container': $store.state.loginState}">
@@ -41,7 +41,7 @@ export default {
     return {
       getJson,
 
-      loadingSek: true
+      loadingSek: false
 
     }
   },
@@ -69,10 +69,7 @@ export default {
     }
   },
   mounted () {
-    this.getDate()
-    this.loadingSek = false
-    this.tanggalan()
-    this.SET_ALAMAT(getJson)
+   this.SET_ALAMAT(getJson)
   },
   methods: {
     ...mapMutations(['SET_LOGIN', 'SET_USER_DATA', 'SET_TANGGAL', 'SET_ALAMAT', 'SET_ADMIN', 'SET_SUPER_ADMIN']),
@@ -133,9 +130,7 @@ margin: auto;
   margin: auto;
 }
 
-.isi{
-    padding: 3em 0 3em;
-}
+
 
 .fixed-bottom{
   position:fixed;

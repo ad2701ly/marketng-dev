@@ -5,6 +5,7 @@ export default {
     host: '0.0.0.0' // default: localhost
   },
   mode: 'spa',
+  target: 'client',
   router: {
     middleware: 'middleware'
   },

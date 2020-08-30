@@ -1,7 +1,5 @@
 export const state = () => ({
-  namaBulan: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
-  namaHari: ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'],
-  host: 'https://marketing.milktawa.id/',
+  host: 'https://marketing.milktawa.id/smartpeople/',
   // host: 'http://127.0.0.1/',
   // host: 'http://192.168.1.100/',
   registerModal: false,
@@ -14,7 +12,8 @@ export const state = () => ({
   maintenance: false,
   tanggal: [{ checkpoint: '2020-04-04', checkpoint2: '2020-04-05' }],
   panel: false,
-  getJson: []
+  getJson: [],
+  loading:false
 })
 
 export const mutations = {
@@ -47,7 +46,11 @@ export const mutations = {
   },
   SET_ALAMAT (state, payload) {
     state.getJson = payload
+  },
+  SET_LOADING (state, payload) {
+    state.loading = payload
   }
+  
 }
 
 export const actions = {

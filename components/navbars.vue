@@ -8,7 +8,7 @@
         Register
       </b-button>
     </div>
-    <div v-else>
+<!--     <div v-else>
       <b-button
         size="is-medium"
         type="is-info"
@@ -19,8 +19,22 @@
       >
         Menu
       </b-button>
-    </div>
+    </div> -->
   </div>
+  <!-- <b-navbar type="is-info" :mobile-burger="false" fixed-top>
+    <template slot="brand" >
+      <b-navbar-item @click="SET_LOGIN_MODAL_ACTIVE(true)">
+        <span>
+          <b-button type="is-info" size="is-large">aaa</b-button>
+        </span>
+      </b-navbar-item>
+      <b-navbar-item @click="SET_AGREED_MODAL_ACTIVE(true)">
+        <span>
+          <b-button type="is-info" size="is-large">aaa</b-button>
+        </span>
+      </b-navbar-item>
+    </template>
+  </b-navbar> -->
 </template>
 
 <script>
